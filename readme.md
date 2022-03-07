@@ -2,9 +2,17 @@
 
 ## Getting Started
 
-This repository is an example of how to build a JavaScript PDF viewer with PDF.js. Check out the related [blog post](https://pspdfkit.com/blog/2021/how-to-build-a-javascript-pdf-viewer-with-pdfjs/) and [demo](https://pspdfkit-labs.github.io/pdfjs-web-example-javascript/#)!
+This repository is an example of how to build a JavaScript PDF viewer with PDF.js. Check out the related [blog post](https://pspdfkit.com/blog/2021/how-to-build-a-javascript-pdf-viewer-with-pdfjs/).
 
-## Running the Example
+## Serving the Examples
+
+1. Navigate to the directory you want to display the examples in. 
+
+```bash
+cd pdfjs-display-example
+# or
+cd pdfjs-viewer-example
+```
 
 1. Install the `serve` package:
 
@@ -19,6 +27,8 @@ serve -l 8080 .
 ```
 
 3. Navigate to http://localhost:8080 to view the website.
+
+While running the Viewer example, navigate to http://localhost:8080/web/viewer?file=document.pdf to view the PDF.
 
 ## Contributing
 
