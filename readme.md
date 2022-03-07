@@ -14,19 +14,19 @@ cd pdfjs-display-example
 cd pdfjs-viewer-example
 ```
 
-1. Install the `serve` package:
+2. Install the `serve` package:
 
 ```bash
 npm install --global serve
 ```
 
-2. Serve the contents of the current directory:
+3. Serve the contents of the current directory:
 
 ```bash
 serve -l 8080 .
 ```
 
-3. Navigate to http://localhost:8080 to view the website.
+4. Navigate to http://localhost:8080 to view the website.
 
 While running the Viewer example, navigate to http://localhost:8080/web/viewer?file=document.pdf to view the PDF.
 
