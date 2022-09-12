@@ -16,10 +16,12 @@ a {
 }
 
 a:hover,
-.zoom:hover {
+.zoom:hover,
+.print-button:hover {
   background-color: #ddd;
   color: #0075f2;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .navigation {
@@ -83,4 +85,23 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.print-button {
+  border: none;
+  color: #005bac;
+  outline: #fff;
+  border: 1px solid #005bac;
+  border-radius: 50%;
+  padding: 12px 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Hide Print button */
+@media print {
+  .navigation {
+    display: none;
+  }
 }

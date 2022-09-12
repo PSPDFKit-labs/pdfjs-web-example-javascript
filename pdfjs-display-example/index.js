@@ -7,6 +7,7 @@ const previousPage = document.querySelector("#prev_page");
 const nextPage = document.querySelector("#next_page");
 const zoomIn = document.querySelector("#zoom_in");
 const zoomOut = document.querySelector("#zoom_out");
+const printButton = document.querySelector(".print-button");
 
 const initialState = {
   pdfDoc: null,
@@ -18,9 +19,9 @@ const initialState = {
 // Render the page
 const renderPage = () => {
   // load the first page
-  console.log(initialState.pdfDoc, "pdfDoc");
+  // console.log(initialState.pdfDoc, "pdfDoc");
   initialState.pdfDoc.getPage(initialState.currentPage).then((page) => {
-    console.log("page", page);
+    // console.log("page", page);
 
     const canvas = document.querySelector("#canvas");
     const ctx = canvas.getContext("2d");
@@ -110,4 +111,9 @@ zoomOut.addEventListener("click", () => {
   if (initialState.pdfDoc === null) return;
   initialState.zoom *= 2 / 3;
   renderPage();
+});
+
+// Print PDF
+printButton.addEventListener("click", () => {
+  window.print();
 });
