@@ -115,5 +115,6 @@ zoomOut.addEventListener("click", () => {
 
 // Print PDF
 printButton.addEventListener("click", () => {
-  window.print();
+  // window.print();
+  printJS("canvas", "html");
 });
