@@ -1,5 +1,9 @@
 const pdf = "document.pdf";
 
+import { GlobalWorkerOptions } from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.min.mjs';
+
+GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.worker.min.mjs';
+
 const pageNum = document.querySelector("#page_num");
 const pageCount = document.querySelector("#page_count");
 const currentPage = document.querySelector("#current_page");
