@@ -118,7 +118,22 @@ zoomOut.addEventListener("click", () => {
 });
 
 // Print PDF
-printButton.addEventListener("click", () => {
-  // window.print();
-  printJS("canvas", "html");
+// printButton.addEventListener("click", () => {
+//   window.print();
+//   // printJS("canvas", "html");
+// });
+
+
+// Rendering the PDF in a Hidden iframe
+printButton.addEventListener('click', () => {
+    const iframe = document.createElement('iframe');
+    iframe.style.position = 'fixed';
+    iframe.style.right = '100%';
+    iframe.style.bottom = '100%';
+    iframe.src = 'document.pdf'; // URL of the PDF file
+    iframe.onload = () => {
+        iframe.contentWindow.print();
+    };
+    document.body.appendChild(iframe);
 });
+
